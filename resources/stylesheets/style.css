@@ -1,0 +1,303 @@
+* {
+    box-sizing: border-box;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+* ::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    height: 100vh;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+}
+
+main {
+    display: flex;
+    height: 100%;
+}
+
+.left-panel {
+    position: relative;
+    width: 30%;
+    background-color: rgba(128, 150, 172, 0.1);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-panel>p {
+    margin: 0;
+    padding: 10px;
+}
+
+.name {
+    font-size: 32px;
+    font-weight: bold;
+    color: rgb(39, 85, 131);
+}
+
+.right-scroll {
+    width: 70%;
+    color: #333;
+    overflow: scroll;
+}
+
+.dark-blue {
+    background-color: rgb(39, 85, 131);
+}
+
+.orange {
+    background-color: orange;
+}
+
+.item-panel {
+    position: relative;
+    height: 100%;
+}
+
+.panel-caption {
+    position: absolute;
+    width: 96%;
+    height: 60px;
+    top: 20px;
+    left: 2%;
+    border-radius: 30px;
+    font-size: 22px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.counter {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 0;
+    left: 0;
+    font-size: medium;
+    font-weight: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.iphone-div-portrait {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.iphone-div-portrait>img {
+    width: 70%;
+}
+
+.item-layer-portrait {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-layer-portrait>img {
+    width: 25%;
+}
+
+.iphone-div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.iphone-div>img {
+    width: 100%;
+}
+
+.item-layer,
+.item-layer-lg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-layer>img {
+    width: 62%;
+}
+
+.item-layer-lg>img {
+    width: 90%;
+}
+
+.lezanta {
+    position: absolute;
+    width: 300px;
+    text-align: right;
+    bottom: 20px;
+    right: 2%;
+    font-size: small;
+}
+
+.dark-blue>.panel-caption>a,
+.orange>.panel-caption>a {
+    text-decoration: none;
+}
+
+.dark-blue>.panel-caption>a,
+.dark-blue>.counter,
+.dark-blue>.lezanta {
+    color: white;
+}
+
+.dark-blue>.panel-caption>a:hover {
+    color: #ddd;
+}
+
+.orange>.panel-caption>a,
+.orange>.counter,
+.orange>.lezanta {
+    color: black;
+}
+
+.orange>.panel-caption>a:hover {
+    color: #555;
+}
+
+.mail {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    overflow: hidden;
+}
+
+.mail>a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    /* background-color: white; */
+}
+
+.mail>a:hover {
+    background-color: #eee;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 40px;
+    position: absolute;
+    bottom: 60px;
+    left: calc(50% - 100px);
+}
+
+footer {
+    background-color: black;
+    color: white;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding: 20px 0; */
+}
+
+.social-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    /* margin-top: 10px; */
+    /* margin: auto; */
+    /* background-color: #777; */
+}
+
+.social>a,
+.social-footer>a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.social>a:hover,
+.social-footer>a:hover {
+    /* background-color: #ccc; */
+    border: 1px solid #777;
+}
+
+.social>a>img,
+.social-footer>a img {
+    width: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+    .left-panel>p {
+        padding: 2px;
+    }
+    .left-panel {
+        height: 200px;
+        position: sticky;
+        width: 100%;
+        top: 0;
+    }
+    .right-scroll {
+        width: 100%;
+        height: calc(100vh - 200px);
+    }
+    .item-panel {
+        height: 500px;
+    }
+    .panel-caption {
+        font-size: 18px;
+    }
+    .social {
+        flex-direction: column;
+        height: 200px;
+        width: 40px;
+        position: absolute;
+        top: 0;
+        left: calc(100% - 60px);
+    }
+    .social>a {
+        width: 100%;
+        height: 40px;
+    }
+}
